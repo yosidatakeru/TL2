@@ -5,9 +5,15 @@
 int main(int argc, char* argv[10])
 {
 
-	//printf("Hello,World\n");
-	//勝手にウィンドが閉じるのを防止している
-	//system("pause");
+	//コマンドライン引数
+	enum Argument
+	{
+		kApplicationPath,//アプリケーションのパス
+		kFilePatj,       //渡されたファイルパス
+		NumArgument
+	};
+
+
 
 	for (int i = 0; i < argc; i++)
 	{
