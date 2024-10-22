@@ -2,6 +2,10 @@
 #include <string>
 #include <winerror.h>
 #include <combaseapi.h>
+#include<stringapiset.h>
+
+//#include<Windows.h>
+//using namespace DirectX;
 
 class TextureConverter
 {
@@ -15,5 +19,9 @@ private:
 
 	//マルチバイト文字列に変換
 	static std::wstring ConverMultiByteStringToWideString(const std::string& mString);
+
+	//DirectX::TexMetadata metadata_;
+
+	//DirectX::ScratchImage scrathImge_;
 
 };
