@@ -1,11 +1,9 @@
 #pragma once
 #include <string>
-#include <winerror.h>
-#include <combaseapi.h>
-#include<stringapiset.h>
+#include"DirectXTex/DirectXTex.h"
 
-//#include<Windows.h>
-//using namespace DirectX;
+
+
 
 class TextureConverter
 {
@@ -20,8 +18,21 @@ private:
 	//マルチバイト文字列に変換
 	static std::wstring ConverMultiByteStringToWideString(const std::string& mString);
 
-	//DirectX::TexMetadata metadata_;
+	void SeparateFilepath(const std::wstring& filePath);
 
-	//DirectX::ScratchImage scrathImge_;
+	void SaveDDSTextureToFile();
+private:
+	DirectX::TexMetadata metadata_;
+
+	DirectX::ScratchImage scrathImge_;
+
+	//ディレクトリパス
+	std::wstring  directoryPath_;
+
+	std::wstring fileName_;
+
+	std::wstring fileExt_;
+
+	
 
 };

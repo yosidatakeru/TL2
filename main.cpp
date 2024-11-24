@@ -1,21 +1,21 @@
 #include<cstdio>
 #include<cstdlib>
-#include<stdio.h>
-#include<stdlib.h>
 #include <cassert>
+#include<Windows.h>
 #include"engine/TextureConverter.h"
 
-int main(int argc, char* argv[10])
+
+//コマンドライン引数
+enum Argument
+{
+	kApplicationPath,//アプリケーションのパス
+	kFilePath,       //渡されたファイルパス
+	NumArgument
+};
+
+int main(int argc, char* argv[])
 {
 	
-	//コマンドライン引数
-	enum Argument
-	{
-		kApplicationPath,//アプリケーションのパス
-		kFilePath,       //渡されたファイルパス
-		NumArgument
-	};
-
 
 	assert(argc >= NumArgument);
 
